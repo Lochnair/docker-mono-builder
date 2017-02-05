@@ -1,0 +1,3 @@
+Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
+root ALL=(ALL) ALL
+builder ALL=(ALL) NOPASSWD:ALL
