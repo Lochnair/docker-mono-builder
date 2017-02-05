@@ -22,4 +22,5 @@ apk add \
     --update \
     libgdiplus-dev
 
+su-exec builder abuild checksum
 su-exec builder abuild -r
