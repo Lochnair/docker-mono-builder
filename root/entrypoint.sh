@@ -4,7 +4,7 @@ sed -i "s/#PACKAGER=.*/PACKAGER=\"$PACKAGER\"/" /etc/abuild.conf
 
 su-exec builder mkdir /home/builder/.abuild
 su-exec builder echo "$PRIV_KEY" > /home/builder/.abuild/privkey.rsa
-su-exec builder echo 'PACKAGE_PRIVKEY="/home/builder/.abuild/privkey.rsa"' > /home/builder/.abuild/abuild.conf
+su-exec builder echo 'PACKAGER_PRIVKEY="/home/builder/.abuild/privkey.rsa"' > /home/builder/.abuild/abuild.conf
 
 mkdir /build
 chown builder: /build
