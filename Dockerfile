@@ -13,6 +13,6 @@ apk add \
     sudo
 
 RUN \
-adduser -G abuild -s /bin/sh builder
+adduser -D -G abuild -s /bin/sh builder
 
 COPY root/ /
