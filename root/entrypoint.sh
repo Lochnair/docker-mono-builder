@@ -2,8 +2,7 @@
 sed -i "s/#MAINTAINER=.*/MAINTAINER=\"$MAINTAINER\"/" /etc/abuild.conf
 sed -i "s/#PACKAGER=.*/PACKAGER=\"$PACKAGER\"/" /etc/abuild.conf
 
-su-exec builder mkdir /home/builder/.abuild
-su-exec builder echo "$PRIV_KEY" > /home/builder/.abuild/privkey.rsa
+su-exec builder chown builder: "/home/builder/.abuild/privkey.rsa"
 su-exec builder echo 'PACKAGER_PRIVKEY="/home/builder/.abuild/privkey.rsa"' > /home/builder/.abuild/abuild.conf
 
 mkdir /build
