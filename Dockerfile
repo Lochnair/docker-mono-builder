@@ -29,4 +29,7 @@ chmod a+w /var/cache/distfiles
 
 COPY root/ /
 
+RUN \
+chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
