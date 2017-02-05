@@ -14,6 +14,6 @@ su-exec builder curl -L -O "http://git.alpinelinux.org/cgit/aports/plain/testing
 su-exec builder curl -L -O "http://git.alpinelinux.org/cgit/aports/plain/testing/mono/arm-remove-sigcontext-include.patch"
 
 su-exec builder sed -i 's/pkgver=.*/pkgver=4.6.2.16/' APKBUILD
-su-exec builder sed -i 's/pkgrel=0/pkgrel=1/'
+su-exec builder sed -i 's/pkgrel=0/pkgrel=1/' APKBUILD
 
 su-exec builder abuild rootpkg
