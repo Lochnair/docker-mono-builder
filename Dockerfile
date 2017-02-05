@@ -22,8 +22,7 @@ apk add \
 
 RUN \
 adduser -D -G abuild -s /bin/sh builder && \
-mkdir /home/builder/.abuild && \
-chown -R builder: /home/builder/.abuild
+mkdir /home/builder/.abuild
 
 RUN \
 mkdir -p /var/cache/distfiles && \
@@ -33,5 +32,7 @@ COPY root/ /
 
 RUN \
 chmod +x /entrypoint.sh
+
+VOLUME /home/builder/packages
 
 ENTRYPOINT ["/entrypoint.sh"]
