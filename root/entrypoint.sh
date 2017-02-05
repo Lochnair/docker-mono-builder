@@ -16,4 +16,10 @@ su-exec builder curl -L -O "http://git.alpinelinux.org/cgit/aports/plain/testing
 su-exec builder sed -i 's/pkgver=.*/pkgver=4.6.2.16/' APKBUILD
 su-exec builder sed -i 's/pkgrel=0/pkgrel=1/' APKBUILD
 
+apk add \
+    --no-cache \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    --update \
+    libgdiplus-dev
+
 su-exec builder abuild -r
