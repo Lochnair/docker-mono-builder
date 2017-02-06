@@ -1,5 +1,5 @@
---- libgc/os_dep.c.orig	2017-02-06 19:37:56.670301474 +0100
-+++ libgc/os_dep.c	2017-02-06 19:38:13.550389870 +0100
+--- ./mono/libgc/os_dep.c.orig	2017-02-06 19:37:56.670301474 +0100
++++ ./mono/libgc/os_dep.c	2017-02-06 19:38:13.550389870 +0100
 @@ -38,10 +38,6 @@
  	  /* has the right declaration for glibc 2.1.			*/
  #         include <sigcontext.h>
