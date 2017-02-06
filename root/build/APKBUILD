@@ -15,6 +15,7 @@ install=""
 subpackages="$pkgname-dev $pkgname-doc $pkgname-lang"
 source="http://download.mono-project.com/sources/mono/mono-${pkgver/_/~}.tar.bz2
 	arm-remove-sigcontext-include.patch
+	os_dep-remove-sigcontext-include.patch
 	"
 
 _builddir="$srcdir"/mono-${pkgver%.*}
